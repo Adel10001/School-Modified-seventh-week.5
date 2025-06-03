@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #f9f9f9;
+            margin: 20px;
+			font-size: 16px;
+        }
+        .quiz-container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .submit-btn {
+            display: block;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 60px;
+            font-size: 14px;
+			font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: auto;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .correct-answer {
+            color: green;
+            font-weight: bold;
+        }
+        .wrong-answer {
+            color: red;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+			font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="quiz-container">
+    <h1> اختبار قصير في بطاقة الأسبوع السابع</h1>
+    <form id="quizForm">
+        <!-- حقل اسم الطالب -->
+        <label style="font-weight: bold; font-size: 18px;"> اسم الطالب: </label>
+        <input type="text" id="name" name="name" placeholder="أدخل اسمك هنا" required>
+
+        <!-- الأسئلة -->
+        <div class="question" data-question="q1">
+             <p>1.   ما هو الجهاز الذي يتكون من مجموعة من العظام المترابطة في جسم الإنسان؟ </p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="a">  الجهاز العصبي.</label>
+                <label><input type="radio" name="q1" value="b">  الجهاز التنفسي.</label>
+               	<label><input type="radio" name="q1" value="c">  الجهاز الهيكلي.</label>
+            </div>
+        </div>
+
+        <div class="question" data-question="q2">
+              <p>2. كم عدد العظام في جسم الإنسان البالغ؟</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="a"> 106 .</label>
+                <label><input type="radio" name="q2" value="b"> 206 .</label>
+                <label><input type="radio" name="q2" value="c"> 420 .</label>
+            </div>
+        </div>
+
+        <div class="question" data-question="q3">
+            <p>3. أي من التالي لا يعد جزءًا من الهيكل المحوري؟</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="a"> الجمجمة .</label>
+                <label><input type="radio" name="q3" value="b"> العمود الفقري .</label>
+                <label><input type="radio" name="q3" value="c"> عظام اليد .</label>
+            </div>
+        </div>
+		<!-- السؤال الرابع -->
+        <div class="question" data-question="q4">
+            <p>4.  إذا تم استبدال الأقراص الغضروفية بين الفقرات بعظام صلبة، فما التأثير الذي سيحدث؟</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="a"> سيصبح العمود الفقري أقوى .</label>
+                <label><input type="radio" name="q4" value="b"> ستقل حركة وانحناء العمود الفقري .</label>
+                <label><input type="radio" name="q4" value="c"> ستتحسن قدرة العمود الفقري على امتصاص الصدمات .</label>
+            </div>
+        </div>
+		
+		<!-- السؤال الخامس -->
+        <div class="question" data-question="q5">
+            <p>5.  إذا فقد الإنسان جزءًا من العمود الفقري، فما التأثير الأكثر وضوحًا على جسمه؟</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="a"> فقدان القدرة على التنفس .</label>
+                <label><input type="radio" name="q5" value="b"> صعوبة الحركة والانحناء .</label>
+                <label><input type="radio" name="q5" value="c"> انخفاض مستوى الكالسيوم في الجسم .</label>
+            </div>
+        </div>
+		<!-- السؤال السادس -->
+        <div class="question" data-question="q6">
+            <p>6.  لماذا يحتاج الأطفال إلى كمية أكبر من الكالسيوم مقارنة بالبالغين؟ </p>
+            <div class="options">
+                <label><input type="radio" name="q6" value="a"> لأن أجسامهم لا تستطيع إنتاج الكالسيوم .</label>
+				<label><input type="radio" name="q6" value="b">  لأنهم يفقدون الكالسيوم بشكل أسرع من البالغين .</label>
+                <label><input type="radio" name="q6" value="c">  لأن عظامهم لا تزال تنمو وتحتاج إلى دعم قوي .</label>
+            </div>
+        </div>
+		
+		<!-- السؤال السابع -->
+        <div class="question" data-question="q7">
+            <p>7. إذا أصيب شخص بكسر في عظمة الحوض، فما الجزء من الجسم الذي قد يفقد اتصاله بالهيكل المحوري؟ </p>
+            <div class="options">
+                <label><input type="radio" name="q7" value="a">الطرف العلوي .</label>
+				<label><input type="radio" name="q7" value="b">الطرف السفلي .</label>
+                <label><input type="radio" name="q7" value="c"> الجمجمة .</label>
+            </div>
+        </div>
+		
+		
+		<!-- السؤال الثامن -->
+        <div class="question" data-question="q8">
+            <p>8. عظام الجمجمة مسطحة، ما فائدة هذا الشكل بالنسبة لوظيفتها؟ </p>
+            <div class="options">
+                <label><input type="radio" name="q8" value="a"> لتقليل الوزن . </label>
+				<label><input type="radio" name="q8" value="b"> لتقليل الاحتكاك . </label>
+                <label><input type="radio" name="q8" value="c"> لتوفير حماية قوية للدماغ . </label>
+            </div>
+        </div>		
+				<!-- السؤال التاسع -->
+        <div class="question" data-question="q9">
+            <p>9.  كان أحمد يجلس في وضعية خاطئة لفترات طويلة أثناء الدراسة، وبعد مدة بدأ يشعر بآلام في ظهره وصعوبة في الانحناء. ذهب إلى الطبيب فأخبره أن الأقراص الغضروفية بين فقرات ظهره بدأت تتآكل.
+             ما السبب المنطقي لتآكل هذه الأقراص؟</p>
+            <div class="options">
+                <label><input type="radio" name="q9" value="a"> نقص الكالسيوم في الغذاء .</label>
+				<label><input type="radio" name="q9" value="b"> الضغط المستمر والوضعية الخاطئة .</label>
+                <label><input type="radio" name="q9" value="c"> نمو العظام بشكل غير طبيعي .</label>
+            </div>
+        </div>
+
+				<!-- السؤال العاشر -->
+        <div class="question" data-question="q10">
+            <p>10. يحب عبدالله اللعب في الخارج، لكنه لا يتعرض كثيرًا للشمس. لاحظ الطبيب أن عظامه أصبحت ضعيفة، ونصحه بتناول الحليب والتعرض لأشعة الشمس. لماذا نصحه الطبيب بذلك؟ </p>
+            <div class="options">
+                <label><input type="radio" name="q10" value="a"> لأن الشمس تساعد في تكوين فيتامين (د) الذي يسهل امتصاص الكالسيوم .</label>
+				<label><input type="radio" name="q10" value="b"> لأن الشمس تزيد من قوة العضلات .</label>
+                <label><input type="radio" name="q10" value="c"> لأن الشمس تمنع تسوس الأسنان .</label>
+            </div>
+        </div>
+		
+
+
+        <button type="submit" class="submit-btn">إرسال الإجابات</button>
+        <div id="result" class="result"></div>
+    </form>
+</div>
+
+<script>
+    // الإجابات الصحيحة لكل سؤال
+    const correctAnswers = {
+        q1: 'c',
+        q2: 'b',
+        q3: 'c',
+		q4: 'b',
+		q5: 'b',
+	    q6: 'c',
+		q7: 'b',
+		q8: 'c',
+		q9: 'b',
+		q10: 'a',		
+    };
+
+    // عند إرسال النموذج
+    document.getElementById("quizForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // التأكد من إدخال اسم الطالب
+        const nameField = document.getElementById("name");
+        if (!nameField.value.trim()) {
+            alert("يرجى إدخال اسم الطالب.");
+            return;
+        }
+
+        let score = 0;
+        let data = {
+            name: nameField.value.trim()
+        };
+
+        // التحقق من الإجابات
+        for (let q in correctAnswers) {
+            const questionDiv = document.querySelector(`[data-question="${q}"]`); 
+            const selected = questionDiv.querySelector(`input[name="${q}"]:checked`);
+            const correctValue = correctAnswers[q];
+
+            if (selected) {
+                const labels = questionDiv.querySelectorAll('label');
+                labels.forEach(label => {
+                    const input = label.querySelector('input');
+                    label.style.color = '';
+                    label.style.fontWeight = '';
+                    if (input.value === correctValue) {
+                        label.classList.add('correct-answer');
+                    } else if (input.checked && input.value !== correctValue) {
+                        label.classList.add('wrong-answer');
+                    }
+                });
+
+                if (selected.value === correctValue) score++;
+                data[q] = selected.value;
+            } else {
+                data[q] = "لم يتم اختيار إجابة";
+            }
+        }
+
+        // إضافة الدرجة والوقت
+        data.score = score;
+        data.timestamp = new Date().toLocaleString("ar-PS");
+		timeZone: "Asia/Gaza"
+
+        // عرض النتيجة
+        document.getElementById("result").textContent = `عزيزي الطالب:  ${data.name}، لقد حصلت على ${score} من ${Object.keys(correctAnswers).length} درجات.`;
+
+        // إرسال البيانات إلى Google Sheets عبر API
+        fetch("https://script.google.com/macros/s/AKfycbyX9JA7ocd7ifWPIx8A9PWY1oGPss1jHzk97-swohW4biPF-sVswRyhq-40KMLkFWX2Ag/exec", {
+            method: "POST",
+            body: JSON.stringify(data)
+        }).then(res => {
+        if (res.ok) {
+    //      alert("✅ تم الإرسال بنجاح!");
+          this.reset(); 
+        } else {
+    //      alert("❌ حدث خطأ أثناء الإرسال.");
+        }
+      }).catch(err => {
+    //    alert("❌ فشل الاتصال بالخادم.");
+        console.error(err);
+      });
+    });
+</script>
+</body>
+</html>
